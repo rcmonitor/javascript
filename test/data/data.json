@@ -1,0 +1,6 @@
+{
+	"parameter": "value",
+	"callback": "(function(){console.log('some'); return 'any';})",
+	"numeric": "42"
+
+}
