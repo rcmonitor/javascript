@@ -8,9 +8,9 @@ var expect = require('chai').expect;
 
 describe('scope-related tests', function(){
 
-	describe('function', function(){
+	describe('values defined higher in scope', function(){
 
-		it('should change values defined higher in scope', function(){
+		it('should not change if it is redeclared in function', function(){
 			var intValue = 1;
 
 			function any(){
@@ -19,9 +19,37 @@ describe('scope-related tests', function(){
 
 			}
 
-			intValue.should.equals(1);
+			any();
 
-			//expect(intMoarValue).to.be.undefined;
+			intValue.should.equals(1);
+		});
+
+		it('should change if function uses it without inner declaration', function(){
+			var intSomeValue = 1;
+
+			function any(){
+				intSomeValue = 18;
+			}
+
+			any();
+
+			intSomeValue.should.equals(18);
+		});
+
+		it('should not change if declaration propagates from code block', function(){
+			var intSomeValue = 2;
+
+			function any(){
+				intSomeValue = 3;
+
+				if(false){
+					var intSomeValue;
+				}
+			}
+
+			any();
+
+			intSomeValue.should.equals(2);
 		})
 	})
 });
