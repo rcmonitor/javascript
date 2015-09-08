@@ -59,6 +59,17 @@ describe('javascript loops', function(){
 			});
 
 			arResult.should.eql(arExpected);
+		});
+
+		it('should not block the scope', function(fCallback){
+
+			var a;
+
+			arSource.forEach(function(intItem, intOffset, arOriginal){
+				a += intItem;
+			});
+
+			fCallback();
 		})
 	})
 });
