@@ -1,20 +1,23 @@
 {
-	"name": "learning_javascript",
-	"version": "1.0.0",
-	"description": "learning this fucking javascript",
-	"main": "index.js",
-	"scripts": {
-		"test": "mocha"
-	},
-	"keywords": [
-		"learning",
-		"javascript"
-	],
-	"author": "rcmonitor",
-	"license": "ISC",
-	"devDependencies": {
-		"chai": "^2.1.2",
-		"mocha": "^2.2.1",
-		"traceback": "^0.3.1"
-	}
+  "name": "learning_javascript",
+  "version": "1.0.0",
+  "description": "learning this fucking javascript",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "learning",
+    "javascript"
+  ],
+  "author": "rcmonitor",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^2.1.2",
+    "mocha": "^2.2.1",
+    "traceback": "^0.3.1"
+  },
+  "dependencies": {
+    "stack-trace": "0.0.9"
+  }
 }
