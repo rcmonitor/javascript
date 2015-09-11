@@ -50,6 +50,6 @@ describe('scope-related tests', function(){
 			any();
 
 			intSomeValue.should.equals(2);
-		})
+		});
 	})
 });
